@@ -1,0 +1,37 @@
+/* article h2 {
+    color: purple;
+  }
+
+   */
+h2 {
+  /* color: blue; */
+  color: blue !important;
+}
+
+@layer base, layout.headlines, theme;
+/* @layer theme, base; */
+
+@layer base {
+  article h2#greet {
+    color: purple;
+  }
+}
+
+@layer layout {
+  @layer headlines {
+    h2 {
+      /* color: red; */
+      color: red !important;
+    }
+  }
+}
+
+@layer theme {
+  h2 {
+    color: blue;
+  }
+}
+
+h2 {
+  color: yellow !important;
+}
